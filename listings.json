@@ -1,7 +1,7 @@
 {
             "house-lot": [
                 {
-                    "img": "/resources/images/Mariana_Talamban.png",
+                    "img": "resources/images/Mariana_Talamban.png",
                     "title": "MARIANA",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -14,7 +14,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Carmina_Talamban.png",
+                    "img": "resources/images/Carmina_Talamban.png",
                     "title": "CARMINA",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -27,7 +27,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Emerald_Talamban.jpg",
+                    "img": "resources/images/Emerald_Talamban.jpg",
                     "title": "EMERALD",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -40,7 +40,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Tiffany_Talamban.png",
+                    "img": "resources/images/Tiffany_Talamban.png",
                     "title": "TIFFANY",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -53,7 +53,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Mika_Talamban.jpg",
+                    "img": "resources/images/Mika_Talamban.jpg",
                     "title": "MIKA",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -66,7 +66,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Bella_Talamban.jpg",
+                    "img": "resources/images/Bella_Talamban.jpg",
                     "title": "BELLA",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -79,7 +79,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Dana_Talamban.png",
+                    "img": "resources/images/Dana_Talamban.png",
                     "title": "DANA",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -92,7 +92,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Cara_Talamban.png",
+                    "img": "resources/images/Cara_Talamban.png",
                     "title": "CARA",
                     "location": "Talamban",
                     "desc": "No Description",
@@ -106,7 +106,7 @@
                 },
 
                 {
-                    "img": "/resources/images/Criselle_Bogo.png",
+                    "img": "resources/images/Criselle_Bogo.png",
                     "title": "CRISELLE",
                     "location": "Bogo City",
                     "desc": "2 Bedroom | 1 Toilet & Bath",
@@ -119,7 +119,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Ezabelle_Bogo.png",
+                    "img": "resources/images/Ezabelle_Bogo.png",
                     "title": "EZABELLE",
                     "location": "Bogo City",
                     "desc": "2 Bedroom | 1 Toilet & Bath",
@@ -132,7 +132,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Bella_Bogo.png",
+                    "img": "resources/images/Bella_Bogo.png",
                     "title": "BELLA",
                     "location": "Bogo City",
                     "desc": "2 Bedrooms | 2 Toilet & Bath",
@@ -145,7 +145,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Cara_Bogo.png",
+                    "img": "resources/images/Cara_Bogo.png",
                     "title": "CARA",
                     "location": "Bogo City",
                     "desc": "3 Bedrooms | 2 Toilet & Baths",
@@ -158,7 +158,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Dani_Bogo.png",
+                    "img": "resources/images/Dani_Bogo.png",
                     "title": "DANI",
                     "location": "Bogo City",
                     "desc": "4 Bedrooms | 3 Toilet & Bath",
@@ -171,7 +171,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Ella_Bogo.png",
+                    "img": "resources/images/Ella_Bogo.png",
                     "title": "ELLA",
                     "location": "Bogo City",
                     "desc": "5 Bedroom | 3 Toilet and Bath",
@@ -184,7 +184,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Freya_Bogo.png",
+                    "img": "resources/images/Freya_Bogo.png",
                     "title": "FREYA",
                     "location": "Bogo City",
                     "desc": "5 Bedrooms | 3 Toilet & Bath",
@@ -197,7 +197,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Greta_Bogo.png",
+                    "img": "resources/images/Greta_Bogo.png",
                     "title": "GRETA",
                     "location": "Bogo City",
                     "desc": "5 Bedrooms | 3 Toilet & Baths",
@@ -215,7 +215,7 @@
 
             "condominium": [
                 {
-                    "img": "/resources/images/Bria_Mactan.png",
+                    "img": "resources/images/Bria_Mactan.png",
                     "title": "BRIA Mactan",
                     "location": "Mactan",
                     "desc": "No Description",
@@ -228,7 +228,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "/resources/images/Valencia_Mactan.png",
+                    "img": "resources/images/Valencia_Mactan.png",
                     "title": "VALENCIA Pre-selling",
                     "location": "Mactan",
                     "desc": "No Description",
