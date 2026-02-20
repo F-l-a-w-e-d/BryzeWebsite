@@ -30,7 +30,7 @@
                         const cardHtml = `
                             <div class="property-card bg-white rounded-2xl border overflow-hidden shadow-sm flex flex-col" style="border-color: var(--beige-dark);" data-category="${category}" data-index="${index}">
                                 <div class="card-image">
-                                    <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover">
+                                    <img src="${item.img}" alt="${item.title}" class="w-full h-full">
                                 </div>
 
                                 <div class="card-content flex-1 p-5 flex flex-col">
@@ -55,7 +55,7 @@
                                             <div><span class="font-semibold">Area:</span> ${item.area}</div>
                                             <div><span class="font-semibold">Floor Area:</span> ${item.floorArea}</div>
                                             <div><span class="font-semibold">Reservation Fee:</span> ${item.reservationFee ? '₱ ' + item.reservationFee : item.reservationFee}</div>
-                                            <div><span class="font-semibold">Downpayment:</span> ${item.downpayment ? '₱ ' + item.downpayment : item.downpayment}</div>
+                                            <div><span class="font-semibold">Down Payment:</span> ${item.downpayment ? '₱ ' + item.downpayment : item.downpayment}</div>
                                             <div class="col-span-2"><span class="font-semibold">TCP:</span> ${item.tcp ? '₱ ' + item.tcp : item.tcp}</div>
                                         </div>
                                     </div>

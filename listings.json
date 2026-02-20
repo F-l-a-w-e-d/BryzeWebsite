@@ -1,7 +1,7 @@
 {
             "house-lot": [
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Mariana_Talamban.png",
                     "title": "MARIANA",
                     "location": "Talamban",
                     "desc": "-",
@@ -14,7 +14,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Carmina_Talamban.png",
                     "title": "CARMINA",
                     "location": "Talamban",
                     "desc": "-",
@@ -27,7 +27,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Emerald_Talamban.jpg",
                     "title": "EMERALD",
                     "location": "Talamban",
                     "desc": "-",
@@ -40,7 +40,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Tiffany_Talamban.png",
                     "title": "TIFFANY",
                     "location": "Talamban",
                     "desc": "-",
@@ -53,7 +53,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Mika_Talamban.jpg",
                     "title": "MIKA",
                     "location": "Talamban",
                     "desc": "-",
@@ -66,7 +66,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Bella_Talamban.jpg",
                     "title": "BELLA",
                     "location": "Talamban",
                     "desc": "-",
@@ -79,7 +79,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Dana_Talamban.png",
                     "title": "DANA",
                     "location": "Talamban",
                     "desc": "-",
@@ -92,7 +92,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Cara_Talamban.png",
                     "title": "CARA",
                     "location": "Talamban",
                     "desc": "-",
@@ -106,7 +106,7 @@
                 },
 
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Criselle_Bogo.png",
                     "title": "CRISELLE",
                     "location": "Bogo City",
                     "desc": "2 Bedroom | 1 Toilet & Bath",
@@ -119,7 +119,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Ezabelle_Bogo.png",
                     "title": "EZABELLE",
                     "location": "Bogo City",
                     "desc": "2 Bedroom | 1 Toilet & Bath",
@@ -132,7 +132,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Bella_Bogo.png",
                     "title": "BELLA",
                     "location": "Bogo City",
                     "desc": "2 Bedrooms | 2 Toilet & Bath",
@@ -145,7 +145,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Cara_Bogo.png",
                     "title": "CARA",
                     "location": "Bogo City",
                     "desc": "3 Bedrooms | 2 Toilet & Baths",
@@ -158,7 +158,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Dani_Bogo.png",
                     "title": "DANI",
                     "location": "Bogo City",
                     "desc": "4 Bedrooms | 3 Toilet & Bath",
@@ -171,7 +171,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Ella_Bogo.png",
                     "title": "ELLA",
                     "location": "Bogo City",
                     "desc": "5 Bedroom | 3 Toilet and Bath",
@@ -184,7 +184,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Freya_Bogo.png",
                     "title": "FREYA",
                     "location": "Bogo City",
                     "desc": "5 Bedrooms | 3 Toilet & Bath",
@@ -197,7 +197,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Greta_Bogo.png",
                     "title": "GRETA",
                     "location": "Bogo City",
                     "desc": "5 Bedrooms | 3 Toilet & Baths",
@@ -215,7 +215,7 @@
 
             "condominium": [
                 {
-                    "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Bria_Mactan.png",
                     "title": "BRIA Mactan",
                     "location": "Mactan",
                     "desc": "-",
@@ -228,7 +228,7 @@
                     "accessibleTo": "-"
                 },
                 {
-                    "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=80",
+                    "img": "/resources/images/Valencia_Mactan.png",
                     "title": "VALENCIA Pre-selling",
                     "location": "Mactan",
                     "desc": "-",
