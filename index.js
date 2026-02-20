@@ -137,6 +137,12 @@
                                     <h3 class="font-bold text-lg mb-2" style="color: var(--text-dark); font-family: 'Open Sans', sans-serif;">${item.title}</h3>
                                     <p class="text-sm mb-4 leading-relaxed line-clamp-3" style="color: var(--text-dark); opacity: 0.85;">${item.desc}</p>
 
+                                    <div class="mb-4 space-y-2">
+                                        <p class="text-sm" style="color: var(--text-dark); opacity: 0.75;"><span class="font-semibold">Location:</span> ${item.location}</p>
+                                        <p class="text-sm" style="color: var(--text-dark); opacity: 0.75;"><span class="font-semibold">Area:</span> ${item.area}</p>
+                                        <p class="text-sm" style="color: var(--text-dark); opacity: 0.75;"><span class="font-semibold">Reservation Fee:</span> ${item.reservationFee ? '₱ ' + item.reservationFee : item.reservationFee}</p>
+                                    </div>
+
                                     <div class="mt-auto border-t pt-4" style="border-color: var(--beige);">
                                         <p class="font-extrabold text-xl tracking-tight mb-4" style="color: var(--text-dark);">${item.price}</p>
                                         <button type="button" class="see-details-btn w-full py-2.5 px-4 rounded-lg text-sm font-semibold transition" style="background: var(--beige); color: var(--text-dark); border: 1px solid var(--beige-dark);">See Details</button>
