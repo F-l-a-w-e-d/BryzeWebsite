@@ -153,14 +153,11 @@
                                         <button type="button" class="expanded-close" aria-label="Close details">X</button>
 
                                         <div class="mb-3">
-                                            <p class="text-sm muted"><span class="font-semibold">Location:</span> ${item.location}</p>
                                             <p class="text-sm muted"><span class="font-semibold">Accessible to:</span> ${item.accessibleTo}</p>
                                         </div>
 
                                         <div class="grid grid-cols-2 gap-3 text-sm mt-2">
-                                            <div><span class="font-semibold">Area:</span> ${item.area}</div>
                                             <div><span class="font-semibold">Floor Area:</span> ${item.floorArea}</div>
-                                            <div><span class="font-semibold">Reservation Fee:</span> ${item.reservationFee ? '₱ ' + item.reservationFee : item.reservationFee}</div>
                                             <div><span class="font-semibold">Down Payment:</span> ${item.downpayment ? '₱ ' + item.downpayment : item.downpayment}</div>
                                             <div class="col-span-2"><span class="font-semibold">TCP:</span> ${item.tcp ? '₱ ' + item.tcp : item.tcp}</div>
                                         </div>
