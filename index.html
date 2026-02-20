@@ -172,9 +172,40 @@
 
                 <!-- Content Area -->
                 <div class="border rounded-b-2xl rounded-tr-2xl p-8 -mt-[1px] bg-white" style="border-color: var(--beige-dark);">
+                    <!-- Filter Controls -->
+                    <div class="mb-6 flex flex-col md:flex-row gap-4">
+                        <!-- Search Bar -->
+                        <div class="flex-1">
+                            <input type="text" id="search-input" placeholder="Search by name or description..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--beige-dark);">
+                        </div>
+                        <!-- Location Filter -->
+                        <div class="md:w-48">
+                            <select id="location-filter" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--beige-dark);">
+                                <option value="">All Locations</option>
+                            </select>
+                        </div>
+                        <!-- Sort Dropdown -->
+                        <div class="md:w-48">
+                            <select id="sort-select" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2" style="border-color: var(--beige-dark);">
+                                <option value="">Sort by...</option>
+                                <option value="location-asc">Location (A-Z)</option>
+                                <option value="location-desc">Location (Z-A)</option>
+                                <option value="price-asc">Price (Low to High)</option>
+                                <option value="price-desc">Price (High to Low)</option>
+                                <option value="area-asc">Area (Low to High)</option>
+                                <option value="area-desc">Area (High to Low)</option>
+                                <option value="reservation-asc">Reservation Fee (Low to High)</option>
+                                <option value="reservation-desc">Reservation Fee (High to Low)</option>
+                            </select>
+                        </div>
+                    </div>
                     <!-- Property Cards Grid -->
                     <div id="property-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 opacity-0 translate-y-4 transition-all duration-500">
                         <!-- Cards injected by JS -->
+                    </div>
+                    <!-- No Data Message -->
+                    <div id="no-data-message" class="hidden text-center py-12">
+                        <p class="text-lg font-semibold muted">No properties available in this category</p>
                     </div>
                 </div>
             </div>

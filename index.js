@@ -1,4 +1,6 @@
  let propertyData = {};
+        let currentCategory = 'house-lot';
+        let filteredData = [];
 
         async function loadProperties() {
             try {
@@ -7,30 +9,128 @@
                 const data = await response.json();
 
                 propertyData = data;
+                return data;
             } catch (err) {
                 console.error(err);
+                return null;
             }
         }
 
-        $(document).ready(function() {
-            loadProperties();    
+        // Get distinct locations from a category
+        function getDistinctLocations(category) {
+            const data = propertyData[category] || [];
+            const locations = [...new Set(data.map(item => item.location).filter(loc => loc && loc !== '-'))];
+            return locations.sort();
+        }
 
-            // Render the chosen category into the grid
-            function renderCategory(category) {
-                const container = $('#property-container');
+        // Update location filter dropdown
+        function updateLocationFilter(category) {
+            const locationFilter = $('#location-filter');
+            locationFilter.empty();
+            locationFilter.append('<option value="">All Locations</option>');
+            
+            const locations = getDistinctLocations(category);
+            locations.forEach(location => {
+                locationFilter.append(`<option value="${location}">${location}</option>`);
+            });
+        }
 
-                // exit animation (fade/slide)
-                container.removeClass('opacity-100 translate-y-0').addClass('opacity-0 translate-y-4');
+        // Parse numeric value from string (e.g., "₱ 6,265,000" -> 6265000)
+        function parseNumeric(str) {
+            if (!str || str === '-') return 0;
+            const cleaned = str.toString().replace(/[₱,\s]/g, '');
+            return parseFloat(cleaned) || 0;
+        }
 
-                setTimeout(() => {
-                    container.empty();
-                    const data = propertyData[category] || [];
+        // Parse area value (e.g., "80 sqm" -> 80)
+        function parseArea(str) {
+            if (!str || str === '-') return 0;
+            const cleaned = str.toString().replace(/[^\d.]/g, '');
+            return parseFloat(cleaned) || 0;
+        }
 
+        // Sort data
+        function sortData(data, sortValue) {
+            if (!sortValue) return data;
+            
+            const [field, order] = sortValue.split('-');
+            const sorted = [...data].sort((a, b) => {
+                let aVal, bVal;
+                
+                switch(field) {
+                    case 'location':
+                        aVal = (a.location || '').toLowerCase();
+                        bVal = (b.location || '').toLowerCase();
+                        return order === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+                    case 'price':
+                        aVal = parseNumeric(a.price);
+                        bVal = parseNumeric(b.price);
+                        return order === 'asc' ? aVal - bVal : bVal - aVal;
+                    case 'area':
+                        aVal = parseArea(a.area);
+                        bVal = parseArea(b.area);
+                        return order === 'asc' ? aVal - bVal : bVal - aVal;
+                    case 'reservation':
+                        aVal = parseNumeric(a.reservationFee);
+                        bVal = parseNumeric(b.reservationFee);
+                        return order === 'asc' ? aVal - bVal : bVal - aVal;
+                    default:
+                        return 0;
+                }
+            });
+            
+            return sorted;
+        }
+
+        // Filter and render data
+        function filterAndRender() {
+            const container = $('#property-container');
+            const noDataMessage = $('#no-data-message');
+            
+            // Get filters
+            const searchTerm = $('#search-input').val().toLowerCase();
+            const locationFilter = $('#location-filter').val();
+            const sortValue = $('#sort-select').val();
+            
+            // Get base data for current category
+            let data = propertyData[currentCategory] || [];
+            
+            // Apply search filter
+            if (searchTerm) {
+                data = data.filter(item => {
+                    const title = (item.title || '').toLowerCase();
+                    const desc = (item.desc || '').toLowerCase();
+                    return title.includes(searchTerm) || desc.includes(searchTerm);
+                });
+            }
+            
+            // Apply location filter
+            if (locationFilter) {
+                data = data.filter(item => item.location === locationFilter);
+            }
+            
+            // Apply sorting
+            data = sortData(data, sortValue);
+            
+            filteredData = data;
+            
+            // exit animation (fade/slide)
+            container.removeClass('opacity-100 translate-y-0').addClass('opacity-0 translate-y-4');
+            
+            setTimeout(() => {
+                container.empty();
+                
+                if (data.length === 0) {
+                    noDataMessage.removeClass('hidden');
+                    container.addClass('opacity-0 translate-y-4');
+                } else {
+                    noDataMessage.addClass('hidden');
+                    
                     data.forEach((item, index) => {
                         const cardHtml = `
-                            <div class="property-card bg-white rounded-2xl border overflow-hidden shadow-sm flex flex-col" style="border-color: var(--beige-dark);" data-category="${category}" data-index="${index}">
+                            <div class="property-card bg-white rounded-2xl border overflow-hidden shadow-sm flex flex-col" style="border-color: var(--beige-dark);" data-category="${currentCategory}" data-index="${index}">
                                 <div class="card-image">
-                                    <img src="${item.img}" alt="${item.title}" class="w-full h-full">
+                                    <img src="${item.img}" alt="${item.title}" class="w-full h-full" style="min-height: 200px;">
                                 </div>
 
                                 <div class="card-content flex-1 p-5 flex flex-col">
@@ -64,11 +164,25 @@
                         `;
                         container.append(cardHtml);
                     });
-
+                    
                     // entry animation
                     container.removeClass('opacity-0 translate-y-4').addClass('opacity-100 translate-y-0');
-                }, 250);
-            }
+                }
+            }, 250);
+        }
+
+        // Render the chosen category into the grid
+        function renderCategory(category) {
+            currentCategory = category;
+            updateLocationFilter(category);
+            $('#search-input').val('');
+            $('#location-filter').val('');
+            $('#sort-select').val('');
+            filterAndRender();
+        }
+
+        $(document).ready(async function() {
+            await loadProperties();
 
             // Open card: add col-span-full + expanded class, then open details by toggling .is-open (CSS anim)
             function openCard(card) {
@@ -147,6 +261,19 @@
                 renderCategory(category);
             });
 
-            // initial
+            // Filter and search event handlers
+            $('#search-input').on('input', function() {
+                filterAndRender();
+            });
+
+            $('#location-filter').on('change', function() {
+                filterAndRender();
+            });
+
+            $('#sort-select').on('change', function() {
+                filterAndRender();
+            });
+
+            // Initial render
             renderCategory('house-lot');
         });
